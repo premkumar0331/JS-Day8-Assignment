@@ -1,3 +1,59 @@
+		JS_Assignment_Day-8
+==============================================================
+
+Q1.https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+Ans:    class Movie{
+        constructor(title,studio,rating="PG"){
+            this.title = title,
+            this.studio = studio,
+            this.rating = rating
+        }
+        static getPG(arr){
+            return arr.filter((e)=>e.rating=="PG");
+        }
+    }
+    let movie1 = new Movie("KGF","BANG","PG");
+    let movie2 = new Movie("BIMLA-NAYAK","PK","UPG");
+    let movie3 = new Movie("RRR","NTR","PG");
+    let movie4 = new Movie("ACHARYA","AMB","PG24");
+    let movie5 = new Movie("Casino Royale","Eon Productions","PG13");
+    let arr1 = [movie1,movie2,movie3,movie4];
+    console.log(Movie.getPG(arr1));//output [ Movie { title: 'KGF', studio: 'BANG', rating: 'PG' },Movie { title: 'RRR', studio: 'NTR', rating: 'PG' } ]
+
+==============================================================
+
+Q2.https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+   
+Ans:
+	 class Circle{
+        constructor(radius,color){
+            this.radius=radius,
+            this.color=color
+        }
+        getRadius(){
+            return `Radius: ${this.radius}`;
+        }
+        getColor(){
+            return `Radius: ${this.color}`;
+        }
+        getArea(){
+            return `Area of Circle: ${(Math.PI*this.radius*this.radius).toFixed(2)}`;
+            
+        }
+        getcircumference(){
+            return `Circumference of circle: ${(2*Math.PI*this.radius).toFixed(2)}`;
+        }
+    }
+
+    let circle = new Circle(5,"red");
+    console.log(circle.getArea()); //output Area of Circle: 78.54 
+    console.log(circle.getRadius()); //output Radius: 5
+    console.log(circle.getColor()); //output Color: red
+    console.log(circle.getcircumference()); //output Circumference of circle: 31.42
+
+==============================================================
+
 Q3. Write a “person” class to hold all the details.
 
 class Person  {
@@ -12,8 +68,10 @@ class Person  {
 var person1 = new Person("prem",30,"hyderabad",23421223);
 var person2 = new Person("Kumar",23,"secunderabad",500304);
 
-console.log(person1);
-console.log(person2);
+console.log(person1);// output Person { name: 'prem', age: 30, place: 'hyderabad', cell: 23421223 }
+console.log(person2);// output Person { name: 'Kumar', age: 23, place: 'secunderabad', cell: 500304 }
+
+==============================================================
 
 Q4. write a class to calculate uber price.
 
@@ -30,5 +88,7 @@ class Uberprice{
 var uberprice1 = new Uberprice(30,5);
 var uberprice2 = new Uberprice(20,3);
 
-console.log(uberprice1.totalprice());
-console.log(uberprice2.totalprice());
+console.log(uberprice1.totalprice());// output 150
+console.log(uberprice2.totalprice());// output 60
+
+==============================================================
